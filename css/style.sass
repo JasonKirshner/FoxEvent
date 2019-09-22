@@ -62,7 +62,9 @@ body
 		width: 78vw
 		margin: 0 auto
 		padding: 4rem 0
+	.container
 		display: flex
+		opacity: 0
 		flex-direction: column
 	h2
 		font-size: 28pt
@@ -92,12 +94,12 @@ body
 	color: $black
 
 	article
-		display: flex
-		justify-content: center
 		padding: 0
+	.container
+		justify-content: center
 
 .highlights
-	article
+	.container
 		flex-direction: row
 
 	.highlight
@@ -124,12 +126,14 @@ body
 		background-color: $black
 		margin: 1rem 0
 .map
-	margin-bottom: 4rem
+	background-color: #f4f4f4
+	padding: 4rem 0
 	article
+		height: 100%
+	.container
 		flex-direction: row
 		align-items: center
 		justify-content: space-between
-		height: 100%
 	iframe
 		box-shadow: 0 0 1em 0.6em rgba(0, 0, 0, 0.2)
 		margin: 0 auto
