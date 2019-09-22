@@ -3,16 +3,44 @@ $fn-blue: #20468B
 $fn-black: #000000
 $fn-white: #ffffff
 
-body
+@mixin reset
 	margin: 0
 	padding: 0
+
+h1,
+h2,
+h3,
+p,
+body
+	@include reset
+
 .navbar
+	background-color: rgba(0,0,0,.5)
+	z-index: 10
+	position: fixed
+	top: 0
+	height: 4rem
+	width: 100vw
+.nav-links
 	display: flex
 	flex-direction: row
 	justify-content: space-between
-	background-color: rgba(0,0,0,.5)
-	padding: 0 4rem
-.nav-links
-	align-items: center
-	margin: 0
-	padding: 0
+	align-content: center
+	width: 78vw
+	margin: 0 auto
+	height: 100%
+
+.hero
+	position: relative
+	top: 10rem
+	height: 100vh
+	width: 100vw
+	text-align: center
+	color: $fn-blue
+
+	h1
+		font-size: 36pt
+		margin-bottom: 2rem
+	h2
+		font-size: 28pt
+		margin-bottom: 2rem
