@@ -41,11 +41,12 @@ body {
 }
 
 .hero {
-  margin-top: 10rem;
+  padding-top: 10rem;
   height: 100%;
   width: 100vw;
   text-align: center;
-  color: #20468B;
+  color: #ffffff;
+  background-color: #20468B;
 }
 
 .hero img {
@@ -170,7 +171,12 @@ body {
           flex-direction: column;
 }
 
-.highlights img {
+.highlights .highlight span {
+  font-size: 18pt;
+  margin-top: 2rem;
+}
+
+.highlights .highlight img {
   width: 5rem;
   height: 5rem;
 }
