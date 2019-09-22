@@ -1,7 +1,8 @@
-$fn-red: #BC2433
-$fn-blue: #20468B
-$fn-black: #000000
-$fn-white: #ffffff
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap')
+$red: #BC2433
+$blue: #20468B
+$black: #000000
+$white: #ffffff
 
 @mixin reset
 	margin: 0
@@ -13,6 +14,7 @@ h3,
 p,
 body
 	@include reset
+	font-family: 'Heebo', sans-serif
 
 .navbar
 	background-color: rgba(0,0,0,.5)
@@ -21,6 +23,7 @@ body
 	top: 0
 	height: 4rem
 	width: 100vw
+
 .nav-links
 	display: flex
 	flex-direction: row
@@ -31,16 +34,79 @@ body
 	height: 100%
 
 .hero
-	position: relative
-	top: 10rem
-	height: 100vh
+	margin-top: 10rem
+	height: 100%
 	width: 100vw
 	text-align: center
-	color: $fn-blue
+	color: $blue
 
+	img
+		width: 100%
 	h1
 		font-size: 36pt
-		margin-bottom: 2rem
+		margin-bottom: 4rem
+
+.details
+	position: relative
+	top: -4px
+	text-align: center
+	color: $white
+	width: 100vw
+	height: 100%
+	background-image: linear-gradient(176deg, $red 70%, $white 70%)
+
+	article
+		height: 25rem
+		width: 78vw
+		margin: 0 auto
+		padding: 2rem 0
+		display: flex
+		flex-direction: column
 	h2
 		font-size: 28pt
-		margin-bottom: 2rem
+		margin: 2rem 0
+	p
+		font-size: 18pt
+
+.title
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	width: 100%
+
+	h2
+		white-space: nowrap
+		padding: 0 2rem
+	span
+		width: 100%
+		background-color: $white
+		height: .1rem
+
+.highlights, .map
+	background-image: none
+	background-color: $white
+	margin: 0 auto
+	color: $black
+
+	article
+		display: flex
+		justify-content: center
+		padding: 0
+
+.highlights
+	article
+		flex-direction: row
+
+	.highlight
+		margin: 4rem
+		display: flex
+		align-items: center
+		flex-direction: column
+	img
+		width: 5rem
+		height: 5rem
+
+.map
+	iframe
+		margin: 0 auto
