@@ -8,6 +8,9 @@ $white: #ffffff
 	margin: 0
 	padding: 0
 
+html
+	scroll-behavior: smooth
+
 h1,
 h2,
 h3,
@@ -18,35 +21,58 @@ body
 	font-family: 'Heebo', sans-serif
 
 .navbar
-	background-color: rgba(0,0,0,.5)
 	z-index: 10
 	position: fixed
 	top: 0
 	height: 4rem
 	width: 100vw
+	transition: background-color 1s
 
 .nav-links
 	display: flex
 	flex-direction: row
 	justify-content: space-between
-	align-content: center
 	width: 78vw
 	margin: 0 auto
 	height: 100%
 
+.rsvp-btn
+	margin: auto 0
+	color: white
+	font-weight: bold
+	background-color: $red
+	padding: 1rem 3rem
+	border-radius: .5rem
+	text-decoration: none
+
 .hero
-	padding-top: 10rem
 	height: 100%
 	width: 100vw
 	text-align: center
 	color: $white
-	background-image: url('../img/bg.svg')
-
+	background-color: $blue
+	overflow: hidden
+	.container
+		display: flex
+		justify-content: space-between
+		flex-direction: column
 	img
+		position: relative
+		top: 20rem
+		z-index: 2
 		width: 100%
+		margin: 0 auto
+		transform: scale(1)
+		transition: transform 1s
+	img:hover
+		transform: scale(1.05)
 	h1
-		font-size: 36pt
+		padding-top: 10rem
+		font-size: 62pt
 		margin-bottom: 4rem
+
+.pop-up
+	animation: pop-up 2s forwards
 
 .details
 	position: relative
@@ -55,14 +81,11 @@ body
 	color: $white
 	width: 100vw
 	height: 100%
-	background-image: linear-gradient(176deg, $red 70%, $white 70%)
+	z-index: 3
 
-	article
-		height: 30rem
+	.container
 		width: 78vw
 		margin: 0 auto
-		padding: 4rem 0
-	.container
 		display: flex
 		opacity: 0
 		flex-direction: column
@@ -71,6 +94,12 @@ body
 		margin: 2rem 0
 	p
 		font-size: 18pt
+
+.desc
+	article
+		height: 10rem
+		padding: 4rem 0
+		background-color: $red
 
 .title
 	display: flex
@@ -93,8 +122,9 @@ body
 	margin: 0 auto
 	color: $black
 
-	article
-		padding: 0
+	h2
+		opacity: 0
+
 	.container
 		justify-content: center
 
@@ -119,21 +149,24 @@ body
 	flex-direction: column
 	align-items: center
 	font-size: 16pt
+	color: #20468B
 
 	span
 		width: 6rem
 		height: .1rem
 		background-color: $black
-		margin: 1rem 0
+		margin: 3rem 0
 .map
 	background-color: #f4f4f4
-	padding: 4rem 0
+	h2
+		padding: 2rem 0
 	article
 		height: 100%
 	.container
 		flex-direction: row
 		align-items: center
 		justify-content: space-between
+		padding-bottom: 4rem
 	iframe
 		box-shadow: 0 0 1em 0.6em rgba(0, 0, 0, 0.2)
 		margin: 0 auto
@@ -147,3 +180,10 @@ footer
 	flex-direction: column
 	justify-content: space-between
 	align-items: center
+
+// @media(max-width: )
+@keyframes pop-up
+	50%
+		transform: translateY(-20rem)
+	100%
+		transform: translateY(-19rem)
