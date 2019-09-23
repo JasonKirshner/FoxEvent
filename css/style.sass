@@ -11,6 +11,8 @@ $white: #ffffff
 html
 	scroll-behavior: smooth
 
+a
+	cursor: pointer
 h1,
 h2,
 h3,
@@ -20,13 +22,74 @@ body
 	@include reset
 	font-family: 'Heebo', sans-serif
 
+.wrapper
+	opacity: 0
+	height: 100vh
+	width: 100vw
+	position: fixed
+	z-index: 12
+	background-color: rgba(0,0,0,.5)
+	display: none
+	align-items: center
+	justify-content: center
+
+	.modal
+		display: flex
+		flex-direction: column
+		background-color: $white
+		width: 40rem
+		height: 25rem
+		border-radius: .4rem
+		box-shadow: 0 0 1rem .4rem rgba(0, 0, 0, 0.4)
+
+		.close
+			cursor: pointer
+			font-size: 24pt
+			padding: 1rem 2rem 1rem
+		.email
+			display: flex
+			align-items: center
+			justify-content: center
+			flex-direction: column
+		h1
+			font-size: 38pt
+			margin-bottom: 4rem
+		input[type=text]
+			font-size: 18pt
+			width: 25rem
+			padding: 1rem 2rem
+			box-sizing: border-box
+			border: .1rem solid #ccc
+			transition: 0.5s
+			outline: none
+			margin: 0
+		input[type=text]:focus
+			border: .1rem solid $black
+
+		.send
+			cursor: pointer
+			margin-top: .5rem
+			padding: 1rem 3rem
+			background-color: $red
+			border-radius: .3rem
+			display: flex
+			flex-direction: row
+			align-items: center
+
+			span
+				color: $white
+				font-size: 18pt
+
+			img
+				margin-left: 1rem
+				width: 2rem
 .navbar
 	z-index: 10
 	position: fixed
 	top: 0
 	height: 4rem
 	width: 100vw
-	transition: background-color 1s
+	transition: background-color .5s
 
 .nav-links
 	display: flex
@@ -67,16 +130,13 @@ body
 	img:hover
 		transform: scale(1.05)
 	h1
-		padding-top: 10rem
 		font-size: 62pt
-		margin-bottom: 4rem
+		margin: 12rem 2rem 10rem
 
 .pop-up
-	animation: pop-up 2s forwards
+	animation: pop-up 1s forwards
 
 .details
-	position: relative
-	top: -4px
 	text-align: center
 	color: $white
 	width: 100vw
@@ -85,20 +145,20 @@ body
 
 	.container
 		width: 78vw
-		margin: 0 auto
 		display: flex
+		margin: 0 auto
 		opacity: 0
 		flex-direction: column
 	h2
 		font-size: 28pt
-		margin: 2rem 0
+		padding: 4rem 0
 	p
 		font-size: 18pt
 
 .desc
 	article
-		height: 10rem
-		padding: 4rem 0
+		height: 100%
+		padding: 2rem 0
 		background-color: $red
 
 .title
@@ -110,7 +170,7 @@ body
 
 	h2
 		white-space: nowrap
-		padding: 0 2rem
+		margin: 0 1rem
 	span
 		width: 100%
 		background-color: $white
@@ -122,18 +182,18 @@ body
 	margin: 0 auto
 	color: $black
 
+	.container
+		padding-bottom: 4rem
+
 	h2
 		opacity: 0
-
-	.container
-		justify-content: center
 
 .highlights
 	.container
 		flex-direction: row
 
 	.highlight
-		margin: 4rem
+		margin: 2rem
 		display: flex
 		align-items: center
 		flex-direction: column
@@ -152,25 +212,22 @@ body
 	color: #20468B
 
 	span
-		width: 6rem
+		transition: width 2s
+		width: 0
 		height: .1rem
 		background-color: $black
 		margin: 3rem 0
 .map
 	background-color: #f4f4f4
-	h2
-		padding: 2rem 0
 	article
 		height: 100%
 	.container
 		flex-direction: row
-		align-items: center
 		justify-content: space-between
-		padding-bottom: 4rem
 	iframe
-		box-shadow: 0 0 1em 0.6em rgba(0, 0, 0, 0.2)
-		margin: 0 auto
-
+		box-shadow: 0 0 1rem 0.6rem rgba(0, 0, 0, 0.2)
+		margin-left: 4rem
+		width: 60%
 footer
 	color: $white
 	width: 100vw
@@ -181,9 +238,46 @@ footer
 	justify-content: space-between
 	align-items: center
 
-// @media(max-width: )
+@media only screen and (max-width: 1048px)
+	.wrapper
+		.modal
+			width: 90vw
+			height: 20rem
+			h1
+				font-size: 28pt
+				margin-bottom: 3rem
+			input[type=text]
+				width: 90%
+	.navbar
+		height: 3.5rem
+
+		img
+			width: 80%
+
+	.rsvp-btn
+		padding: .8rem 2rem
+		font-size: 11pt
+	.nav-links
+		width: 90vw
+	.hero h1
+		font-size: 42pt
+
+	.title
+		margin-top: 0
+	.details
+		p
+			font-size: 14pt
+		.container
+			width: 90vw
+			flex-direction: column
+
+	.map
+		iframe
+			margin: 4rem 0 0
+			width: 100%
+
 @keyframes pop-up
-	50%
+	60%
 		transform: translateY(-20rem)
 	100%
-		transform: translateY(-19rem)
+		transform: translateY(-19.5rem)
