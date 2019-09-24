@@ -3,6 +3,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  max-width: 100vw;
+}
+
 a {
   cursor: pointer;
 }
@@ -245,6 +249,10 @@ body {
   background-color: #BC2433;
 }
 
+.desc path {
+  width: 100%;
+}
+
 .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -438,6 +446,12 @@ footer {
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .hero img {
     top: 0;
+  }
+  .container {
+    opacity: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
