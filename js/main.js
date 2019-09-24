@@ -2,10 +2,6 @@ history.scrollRestoration = "manual"
 
 var modal = false
 
-if (/*@cc_on!@*/false || !!document.documentMode) {
-	document.body.innerHTML = "PLEASE UPDATE BROWSER"
-}
-
 $(() => {
 	var flag = true
 	var desc = $('.desc').position().top - 300
