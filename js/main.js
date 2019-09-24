@@ -75,7 +75,7 @@ if (!isIE) {
 				$('.navbar').css({
 					background: 'none'
 				});
-		})
+		});
 	});
 
 	var closeModal = () => {
