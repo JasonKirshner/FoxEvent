@@ -305,6 +305,8 @@ body {
 }
 
 .highlights .highlight {
+  position: relative;
+  top: 5rem;
   margin: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -326,6 +328,11 @@ body {
 .highlights .highlight img {
   width: 5rem;
   height: 5rem;
+}
+
+.highlight-up {
+  -webkit-animation: highlights 1s forwards;
+          animation: highlights 1s forwards;
 }
 
 .info {
@@ -447,7 +454,21 @@ footer {
 @supports (-ms-ime-align: auto) {
   .desc svg {
     position: relative;
-    top: -2px;
+    top: -.1rem;
+  }
+}
+
+@-webkit-keyframes highlights {
+  100% {
+    -webkit-transform: translateY(-5rem);
+            transform: translateY(-5rem);
+  }
+}
+
+@keyframes highlights {
+  100% {
+    -webkit-transform: translateY(-5rem);
+            transform: translateY(-5rem);
   }
 }
 

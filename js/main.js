@@ -53,6 +53,16 @@ $(() => {
 				$('.highlights .container').animate({
 					'opacity': 1
 				}, 300)
+				$('.highlight:eq(0)').addClass('highlight-up')
+				setTimeout(() => {
+					$('.highlight:eq(1)').addClass('highlight-up')
+				}, 100)
+				setTimeout(() => {
+					$('.highlight:eq(2)').addClass('highlight-up')
+				}, 200)
+				setTimeout(() => {
+					$('.highlight:eq(3)').addClass('highlight-up')
+				}, 300)
 				break
 			case pos > map:
 				$('.map h2').animate({

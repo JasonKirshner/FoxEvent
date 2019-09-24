@@ -199,6 +199,8 @@ body
 		flex-direction: row
 
 	.highlight
+		position: relative
+		top: 5rem
 		margin: 2rem
 		display: flex
 		align-items: center
@@ -209,6 +211,9 @@ body
 		img
 			width: 5rem
 			height: 5rem
+
+.highlight-up
+	animation: highlights 1s forwards
 
 .info
 	display: flex
@@ -286,7 +291,11 @@ footer
 	.desc
 		svg
 			position: relative
-			top: -2px
+			top: -.1rem
+
+@keyframes highlights
+	100%
+		transform: translateY(-5rem)
 
 @keyframes pop-up
 	60%
