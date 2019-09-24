@@ -435,6 +435,12 @@ footer {
   }
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .hero img {
+    top: 0;
+  }
+}
+
 @-webkit-keyframes pop-up {
   60% {
     -webkit-transform: translateY(-20rem);
