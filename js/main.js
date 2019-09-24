@@ -76,7 +76,7 @@ if (!isIE) {
 					background: 'none'
 				});
 		})
-	})
+	});
 
 	var closeModal = () => {
 		console.log(modal)
