@@ -443,13 +443,10 @@ footer {
   }
 }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .hero img {
-    top: 0;
-  }
-  .container {
-    opacity: 1;
-    display: block;
+@supports (-ms-ime-align: auto) {
+  .desc svg {
+    position: relative;
+    top: -2px;
   }
 }
 

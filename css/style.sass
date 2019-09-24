@@ -281,14 +281,11 @@ footer
 			margin: 4rem 0 0
 			width: 100%
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
-	.hero
-		img
-			top: 0
-
-	.container
-		opacity: 1
-		display: block
+@supports (-ms-ime-align:auto)
+	.desc
+		svg
+			position: relative
+			top: -2px
 
 @keyframes pop-up
 	60%
