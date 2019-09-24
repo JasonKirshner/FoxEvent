@@ -2,7 +2,7 @@ history.scrollRestoration = "manual"
 
 var modal = false
 
-$(document).ready(() => {
+$(() => {
 	var flag = true
 	var desc = $('.desc').position().top - 300
 	var highlights = $('.highlights').position().top - 300
