@@ -249,7 +249,20 @@ footer
 	justify-content: space-between
 	align-items: center
 
+.desc
+	svg
+		position: relative
+		top: -.1rem
+
 @media only screen and (max-width: 1048px)
+	.details.map
+		iframe
+			margin: 4rem 0 0
+			width: 100%
+		h2
+			opacity: 1
+		.container
+			opacity: 1
 	.wrapper
 		.modal
 			width: 90vw
@@ -277,21 +290,10 @@ footer
 		margin-top: 0
 	.details
 		p
-			font-size: 14pt
+			font-size: 28pt
 		.container
 			width: 90vw
 			flex-direction: column
-
-	.map
-		iframe
-			margin: 4rem 0 0
-			width: 100%
-
-@supports (-ms-ime-align:auto)
-	.desc
-		svg
-			position: relative
-			top: -.1rem
 
 @keyframes highlights
 	100%

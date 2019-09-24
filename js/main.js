@@ -65,17 +65,19 @@ $(() => {
 				}, 300)
 				break
 			case pos > map:
-				$('.map h2').animate({
-					'opacity': 1
-				}, 300)
-				$('.map .container').animate({
-					'opacity': 1
-				}, 300)
-				$('.info span').css('width', '12rem')
+				if ($('.map .container').css('opacity') == 0) {
+					$('.map h2').animate({
+						'opacity': 1
+					}, 300)
+					$('.map .container').animate({
+						'opacity': 1
+					}, 300)
+					$('.info span').css('width', '12rem')
+				}
 				flag = false
 		}
 
-		if (pos > desc - 200)
+		if (pos > desc - 100)
 			$('.navbar').css({
 				backgroundColor: 'rgba(0,0,0,.5)'
 			})
